@@ -5,6 +5,6 @@ const store = require('../middleware/multer');
 //routes
 route.get('/',controller.home);
 
-route.post('/uploadMultiple',store.array('images', 12));
+route.post('/uploadMultiple',store.array('images', 12),controller.uploads);
 
 module.exports = route;
