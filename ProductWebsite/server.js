@@ -11,6 +11,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
+//Connect MongoDb
+require('./server/database/database')();
+
 //View Engine
 app.engine('hbs', hbs({
     extname:'hbs',
