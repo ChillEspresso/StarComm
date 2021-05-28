@@ -35,7 +35,7 @@ exports.uploads = (req,res,next)=>{
 
         return newUpload
             .save()
-            .then(() => {
+            .then(() =>{
                 return { msg: `${files[index].originalname}image Uploaded Successfullly`}
             })
             .catch(error =>{
@@ -43,14 +43,14 @@ exports.uploads = (req,res,next)=>{
                     if(error.name === 'MongoError' && error.code === 11000){
                         return Promise.reject({ error: `Duplicate ${files[index].originalname}. File Already exists!`})
                     }
-                    return Promise.reject({ error: error.message || `Cannot Uplaod ${files[index].originalname} Something Missing`})
+                    return Promise.reject({ error:error.message || `Cannot Uplaod ${files[index].originalname} Something Missing`})
                 }
             })
     });
 
     Promise.all(result)
         .then(msg =>{
-            response.json(msg);
+            res.json(msg);
             //res.redirect('/')
         })
         .catch(err =>{
