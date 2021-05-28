@@ -30,7 +30,9 @@
                             {{!--Bootstrap Card--}}
                                 <div class="col-3">
                                     <div class="card shadow" style="width: 18rem;">
-                                        <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" alt="..." class="img-fluid">
+                                        <div class="product-img">
+                                            <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" alt="..." class="img-fluid">
+                                        </div>                                        
                                         <div class="card-body">
                                             <h5 class="card-title font-poppins">Title</h5>
                                             <p class="text-secondary font-size-09">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -44,9 +46,6 @@
                 {{/each}}
             </div>
         </section>
-        {{!-- /Display Images --}}
-    </div>
-
-    
+        {{!-- /Display Images --}}    
 </section>
 {{!-- /section --}}
