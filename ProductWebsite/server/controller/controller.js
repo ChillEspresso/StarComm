@@ -1,12 +1,8 @@
-const { response } = require("express");
-
-
-
-exports.home = (req,res)=>{
+exports.home=(req,res)=>{
     res.render('main');
 }
 
-exports.uploads=(req,res,next)=>{
+exports.uploads = (req,res,next)=>{
     const files = req.files;
 
     if(!files){
@@ -15,5 +11,9 @@ exports.uploads=(req,res,next)=>{
         return next(error)
     }
 
+    //conver images to base 64
     res.json(files);
+
+
 }
+
