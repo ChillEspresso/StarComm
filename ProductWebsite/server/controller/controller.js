@@ -2,8 +2,9 @@ const UploadModel = require('../model/schema');
 const fs = require('fs');
 const { response } = require('express');
 
-exports.home=(req,res)=>{
-    res.render('main');
+exports.home = async(req,res)=>{
+    const all_images = await UploadModel.find()
+    res.render('main',{images: all_images});
 }
 
 exports.uploads = (req,res,next)=>{
@@ -50,8 +51,8 @@ exports.uploads = (req,res,next)=>{
 
     Promise.all(result)
         .then(msg =>{
-            res.json(msg);
-            //res.redirect('/')
+            //res.json(msg);
+            res.redirect('/')
         })
         .catch(err =>{
             res.json(err)

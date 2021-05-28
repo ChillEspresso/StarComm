@@ -2,7 +2,7 @@
 <section class="section my-4">
     <div class="container text-center">
         <div class="title py-5">
-            <h1>Node File Uploader</h1>
+            <h1>StarComm Furniture Store</h1>
             <p class="subtitle">Upload Images to <strong>Server</strong></p>
         </div>
 
@@ -24,16 +24,24 @@
         {{!-- Display Images --}}
         <section class="mt-5">
             <div class="row">
-                <div class="col-3">
-                    <div class="card shadow" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="..." class="img-fluid">
-                        <div class="card-body">
-                            <h5 class="card-title font-poppins">Title</h5>
-                            <p class="text-secondary font-size-09">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-info font-size-09 text-light">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                {{#each images }}
+                    {{#each this}}
+                        {{#if imageBase64}}
+                            {{!--Bootstrap Card--}}
+                                <div class="col-3">
+                                    <div class="card shadow" style="width: 18rem;">
+                                        <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" alt="..." class="img-fluid">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-poppins">Title</h5>
+                                            <p class="text-secondary font-size-09">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-info font-size-09 text-light">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{!--/Bootstrap Card--}}
+                        {{/if}}
+                    {{/each}}
+                {{/each}}
             </div>
         </section>
         {{!-- /Display Images --}}
