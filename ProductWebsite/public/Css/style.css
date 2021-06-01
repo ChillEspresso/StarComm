@@ -32,6 +32,25 @@ input:focus{
     outline: none !important;
 }
 
+#CardContainer{
+    margin: 20px 10px;
+}
+
+
+
+.product-img{
+    overflow: hidden;
+    max-height: 350px;
+}
+
+.product-img img{
+    transition: all 1.5s ease;
+}
+
+.product-img:hover img{
+    transform: scale(1.1);
+}
+
 /* Header */
 
 header{
@@ -40,7 +59,76 @@ header{
     width: 100%;
 }
 
-.banner{
+button{
+    padding: 15px 40px;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+.banner-row{
+    display: flex;
+    width: 100%;
+    background: #F2F2F2;
+    border-radius: 15px;
+    overflow: hidden;
+} 
+
+.banner-left .banner-right{
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+.banner-right img{
+    width: 100%;
+} 
+
+.banner-left{
+    padding: 8% 5%;
+    position: relative;
+}
+
+.banner-left h1{
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.banner-left p{
+    color: #777;
+    line-height: 22px;
+    margin: 15px 0 30px;
+}
+
+.banner-left ul{
+    position: absolute;
+    bottom: 30px;
+}
+
+.banner-orb{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+ul .active{
+    background: #333;
+}
+
+
+
+/* .banner{
     position: relative;
     background: url('../Assets/background2.jpeg');
     min-height: 100vh;
@@ -55,7 +143,6 @@ header{
     font-size: 2.8em;
     font-weight: 1000;
     color: #262626;
-    /* text-transform: uppercase; */
 }
 
 .banner p{
@@ -65,8 +152,7 @@ header{
     font-weight: 1000;
     color: #262626;
     line-height: 1.5em;
-    /* text-transform: uppercase; */
-}
+} */
 
 .btnProducts{
     display: inline-block;
@@ -86,6 +172,8 @@ header{
 }
 
 /* Header */
+
+
 
 /* Navbar */
 
@@ -130,6 +218,11 @@ header{
 }
 
 /* Navbar */
+
+
+
+
+/* Media Queries */
 
 
 @media(max-width: 768px){
