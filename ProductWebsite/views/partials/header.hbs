@@ -11,21 +11,48 @@
 
     <script type = "text/javascript" src="/dist/jquery.min.js"></script>
     <script type = "text/javascript" src="/js/bootstrap.min.js"></script>
-
+    <script type = "text/javascript" src="/js/custom.js"></script>
 </head>
 <body>
 
     {{> navbar}}
-    <section class="banner">
+
+    {{!-- <section class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <h2 class="font-poppins">StarComm Furniture Store</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Sed rutrum felis a mi mattis congue. Mauris porttitor nibh ante, non tristique augue hendrerit vitae. Duis euismod dolor sit amet lectus imperdiet mattis. Donec tellus lectus, sodales nec pharetra sit amet, fermentum at est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vel leo eu mi convallis suscipit vel sed lorem. Donec consequat rhoncus lorem, vitae aliquet turpis consequat nec. Mauris efficitur eu odio eu egestas. In in pretium velit. Proin egestas maximus felis, at vestibulum libero tempor sed.
                     </p>
                     <a href="#" class="btnProducts">Products</a>      
                 </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+    <section class="banner">
+        <div class="row banner-row">
+            <div class="col-md-6 banner-left">
+                <h1 class="font-poppins">StarComm Furniture Store</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Sed rutrum felis a mi mattis congue. Mauris porttitor nibh ante, non tristique augue hendrerit vitae. Duis euismod dolor sit amet lectus imperdiet mattis. Donec tellus lectus, sodales nec pharetra sit amet, fermentum at est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vel leo eu mi convallis suscipit vel sed lorem. Donec consequat rhoncus lorem, vitae aliquet turpis consequat nec. Mauris efficitur eu odio eu egestas. In in pretium velit. Proin egestas maximus felis, at vestibulum libero tempor sed.
+                </p>
+
+                <ul>
+                    <li class="banner-orb active"></li>
+                    <li class="banner-orb"></li>
+                    <li class="banner-orb"></li>
+                </ul>
+
+                <button type="button">Explore Products</button>
+            </div>
+            <div class="col-md-6 banner-right">
+                <img src="../Assets/background2.jpeg" alt="bgimg" id="bannerImage">
             </div>
         </div>
     </section>
