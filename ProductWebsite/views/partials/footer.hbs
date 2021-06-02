@@ -1,17 +1,34 @@
 <script>
-  var btn = document.getElementsByClassName("banner-orb");
+var orb = document.getElementsByClassName("banner-orb");
 var banner = document.getElementById("bannerImage");
 
-btn[0].onclick = function(){
-  banner.src = "../Assets/background2.jpeg";
+orb[0].onclick = function(){
+  banner.src = "../Assets/pic1.png";
+  animation();
+  this.classList.add("orb-active");
 }
 
-btn[1].onclick = function(){
-  banner.src = "../Assets/background1.jpeg";
+orb[1].onclick = function(){
+  banner.src = "../Assets/pic2.png";
+  animation();
+  this.classList.add("orb-active");
 }
 
-btn[2].onclick = function(){
-  banner.src = "../Assets/background2.jpeg";
+orb[2].onclick = function(){
+  banner.src = "../Assets/pic3.png";
+  animation();
+  this.classList.add("orb-active");
+}
+
+function animation(){
+  banner.classList.add("zoom");
+
+  setTimeout(function(){
+    banner.classList.remove("zoom");
+  },500);
+  for(b of orb){
+    b.classList.remove("orb-active");
+  }
 }
 </script>
 </body>

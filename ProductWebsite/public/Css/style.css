@@ -2,8 +2,11 @@
 
 :root{
     --white-light: rgba(255, 255, 255, 0.5);
-    --alice-blue: #f8f9fa;
-    --carribean-green: #40c9a2;
+    --nice-blue: #DAE4FF;
+    --nice--black: #585E6E;
+    --darkish--grey: #A5ABBD;
+    --light-brown: #F4E2C8;
+    --nice-brown: #BBAB92;
     --gray: #ededed;
 }
 
@@ -12,8 +15,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -71,6 +72,14 @@ button{
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 }
 
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background: var(--nice-blue);
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
 .banner-row{
     display: flex;
     width: 100%;
@@ -122,8 +131,26 @@ button{
     cursor: pointer;
 }
 
-ul .active{
+#Orbs{
+    position: absolute;
+    bottom: 30px;
+}
+
+ul .orb-active{
     background: #333;
+}
+
+.zoom{
+    animation: zoomout 0.5s linear 1;
+}
+
+@keyframes zoomout {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 
@@ -179,6 +206,7 @@ ul .active{
 
 .navbar{
     padding: 20px 0;
+    background: var(--nice-blue);
 }
 
 .nav-item {
@@ -214,7 +242,8 @@ ul .active{
 }
 
 .navbar-collapse{
-    background: #fff;
+    background: var(--white-light);
+    border-radius: 15px;
 }
 
 /* Navbar */
