@@ -37,7 +37,9 @@ input:focus{
     margin: 20px 10px;
 }
 
-
+#productCard{
+    max-height: 550px;
+}
 
 .product-img{
     overflow: hidden;
@@ -46,6 +48,7 @@ input:focus{
 
 .product-img img{
     transition: all 1.5s ease;
+    max-height: 350px;
 }
 
 .product-img:hover img{
@@ -253,13 +256,3 @@ ul .orb-active{
 
 /* Media Queries */
 
-
-@media(max-width: 768px){
-    
-.banner{
-    padding: 200px 0;
-}
-.banner h2{
-    font-size: 1.8em;
-}
-}
