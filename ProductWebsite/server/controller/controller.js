@@ -16,7 +16,7 @@ exports.uploads = (req,res,next)=>{
         return next(error)
     }
 
-    //conver images to base64 encoding 
+    //convert images to base64 encoding 
 
     let imgArray = files.map((file) =>{
         let img = fs.readFileSync(file.path)
