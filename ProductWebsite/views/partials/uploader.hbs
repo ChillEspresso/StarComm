@@ -1,0 +1,46 @@
+<div class="title py-4 text-center">
+            <h1>StarComm Furniture Store</h1>
+            <p class="subtitle">Upload Images to <strong>Server</strong></p>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form action="/uploadMultiple" enctype="multipart/form-data" method="POST">
+                    <div class="row my-4">
+                        <div class="col-8 col-md-8 col-lg-12">
+                            <label for="name" class="form-label">Product Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Product name" value="" name="name" required />
+                        </div>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-8 col-md-8 col-lg-8">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" id="price" name="price" class="form-control" placeholder="$$$"
+                        </div>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-8 col-md-8 col-lg-12">
+                            <label for="desc" class="form-label">Product Description</label>
+                            <textarea type="text" class="form-control" id="desc" name="desc" placeholder="description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row my-4">
+                        <div class="col-8">
+                            <input type="file" class="form-control" name="images" id="formFile" multiple/>
+                        </div>                        
+                    </div>
+                    
+                    <br />
+
+                    <div class="row">
+                        <div class="col-2">
+                            <input type="submit" class="btn btn-warning" value="Upload Images" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
