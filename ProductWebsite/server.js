@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-
 const hbs = require('express-handlebars');
 const path = require('path');
 

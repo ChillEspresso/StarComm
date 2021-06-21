@@ -8,7 +8,7 @@ const uploadSchema = new  mongoose.Schema({
     },
     contentType:{
         type:String,
-        required: true
+        required:true
     },
     imageBase64:{
         type:String,

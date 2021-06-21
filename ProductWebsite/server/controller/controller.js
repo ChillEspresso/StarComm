@@ -29,7 +29,8 @@ exports.uploads = (req,res,next)=>{
         let finalImage = {
             filename:files[index].originalname,
             contentType:files[index].mimetype,
-            imageBase64: src
+            imageBase64: src,
+            // name: req.body.name
         }
 
         let newUpload = new UploadModel(finalImage);
