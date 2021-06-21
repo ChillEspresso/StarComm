@@ -1,0 +1,24 @@
+<section id="CardContainer">
+    <div class="row pb-5 mb-4">
+        {{#each images }}
+            {{#each this}}
+                {{#if imageBase64}}
+                    {{!--Bootstrap Card--}}
+                      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="card rounded shadow-sm border-0 my-4" id="productCard">
+                          <div class="product-img">
+                              <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" alt="...">
+                          </div>                                        
+                          <div class="card-body p-4">
+                              <h5 class="card-title font-poppins">Title</h5>
+                              <p class="text-secondary font-size-09">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-success font-size-09 text-light">View</a>
+                          </div>
+                        </div>
+                      </div>
+                    {{!--/Bootstrap Card--}}
+                {{/if}}
+            {{/each}}
+        {{/each}}
+    </div>
+</section>
