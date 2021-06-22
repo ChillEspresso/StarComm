@@ -26,4 +26,5 @@ app.set('view engine', 'hbs');
 //Calling routes
 app.use('/',require('./server/router/router'));
 
+
 app.listen(3000, ()=> console.log(`Server started on http://localhost:3000`));

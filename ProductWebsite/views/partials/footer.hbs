@@ -1,3 +1,8 @@
+<button class="btn" id="scrollToTopBtn" onclick="scrollTop()">☝️</button>
+<footer>
+    
+</footer>  
+
 <script>
 var orb = document.getElementsByClassName("banner-orb");
 var banner = document.getElementById("bannerImage");
@@ -30,6 +35,52 @@ function animation(){
     b.classList.remove("orb-active");
   }
 }
+</script>
+
+<script type="text/javascript">
+//Smooth Scrolling
+var scroll = new SmoothScroll();
+var easeInOutCubic = new SmoothScroll('[data-easing="easeInOutQuad"]', {easing: 'easeInOutQuad'});
+
+//Scroll Back to top
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+
+/*function scrollToTop() {
+  Scroll Logic
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}*/
+
+function scrollTop(){
+  var Home = document.querySelector('#HeaderSection');
+  scroll.animateScroll(Home);
+}
+
+
+scrollToTopBtn.addEventListener("click", scrollTop);
+
+
+// Log scroll events
+var logScrollEvent = function (event) {
+ 
+    // The event type
+    console.log('type:', event.type);
+ 
+    // The anchor element being scrolled to
+    console.log('anchor:', event.detail.anchor);
+ 
+    // The anchor link that triggered the scroll
+    console.log('toggle:', event.detail.toggle);
+ 
+};
+ 
+// Listen for scroll events
+document.addEventListener('scrollStart', logScrollEvent, false);
+document.addEventListener('scrollStop', logScrollEvent, false);
+document.addEventListener('scrollCancel', logScrollEvent, false);
 </script>
 </body>
 </html>
